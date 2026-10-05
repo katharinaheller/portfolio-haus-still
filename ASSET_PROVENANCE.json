@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-05",
+  "rasterAssets": [
+    {
+      "name": "hotel",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-width hero photograph for fictional boutique hotel Haus Still in the Allgäu, Germany. Primary request: exceptionally art-directed architectural editorial photograph of a quiet alpine retreat, original fictional location. A warm honey-coloured timber clad modernist house with broad panoramic windows, pale limestone patio and understated lounge chair, grassy hillside foreground, layered hazy mountains and forest behind. Landscape 3:2 framing, sophisticated European travel magazine, medium format architectural photography, true material texture, no people. Early morning golden light and soft long shadows, muted olive, pine and warm cream colour palette. Architectural subject in middle right, natural open landscape across rest of frame. Do not create typography, logos, collage, borders, UI or watermark.",
+      "method": "Built-in image_gen",
+      "sourceIdentifier": "exec-0ec4481a-ceea-468a-b6bc-da89c9eaea7a.png",
+      "licenseNote": "Original AI-generated concept image, no third-party stock image. Not a claim of exclusive copyright. Subject to generation-service terms."
+    },
+    {
+      "name": "hotel-room",
+      "prompt": "Use case: photorealistic-natural. Editorial interior photograph for fictional alpine boutique hotel Haus Still. A restful bedroom with large low natural oak bed, rumpled oatmeal linen, a muted brown wool throw, plaster walls, minimal side table with ceramic pitcher. Large picture window looks into hazy alpine foothills and trees. Morning sunshine from right casting dappled shadows. Architectural Digest European restrained styling, photorealistic materials, warm cream and sage palette, 3:2 landscape composition. No people, no text, no logos, no watermark.",
+      "method": "Built-in image_gen",
+      "sourceIdentifier": "exec-09b711cd-530d-4c7d-afa3-b68383a8e964.png",
+      "licenseNote": "Original AI-generated concept image, no third-party stock image. Not a claim of exclusive copyright. Subject to generation-service terms."
+    }
+  ],
+  "codeNativeArtwork": [
+    "Original SVG logo/favicon",
+    "Original CSS/SVG interface graphics",
+    "Original code-rendered social card"
+  ]
+}

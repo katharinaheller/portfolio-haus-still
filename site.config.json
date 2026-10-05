@@ -1,0 +1,21 @@
+{
+  "name": "Haus Still",
+  "slug": "haus-still",
+  "origin": "https://katharinaheller.github.io",
+  "basePath": "/portfolio-haus-still/",
+  "routes": [
+    "",
+    "haus/",
+    "wohnen/",
+    "wohnen/waldzimmer/",
+    "wohnen/bergzimmer/",
+    "wohnen/atelier/",
+    "draussen/",
+    "journal/",
+    "auszeit/",
+    "impressum/",
+    "datenschutz/"
+  ],
+  "locale": "de-DE",
+  "output": "_site"
+}

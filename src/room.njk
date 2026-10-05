@@ -1,0 +1,12 @@
+---
+layout: base.njk
+pagination:
+  data: rooms
+  size: 1
+  alias: room
+permalink: /wohnen/{{ room.slug }}/index.html
+eleventyComputed:
+  title: "{{ room.name }} – Ihr Rückzugsort im Allgäu"
+  description: "{{ room.description }} Ab {{ room.price }} € pro Nacht für zwei. Fiktives Zimmerangebot im Haus Still."
+---
+<section class="page-intro"><a class="text-link" href="{{ '/wohnen/' | url }}">← Alle Räume</a><p class="eyebrow">{{ room.size }} M² · FÜR ZWEI PERSONEN</p><h1>Das <em>{{ room.name }}.</em></h1><p>{{ room.description }}</p></section><section class="wide-photo"><img src="{{ '/images/room-1536.webp' | url }}" width="1536" height="1024" alt="Generierte Stimmungsaufnahme eines ruhigen Hotelzimmers als Beispiel für das {{ room.name }}" fetchpriority="high"></section><section class="editorial story"><p class="eyebrow">IHR RAUM IM DETAIL</p><div><h2>Alles da.<br>Und Platz für <em>weniger.</em></h2><ul class="features">{% for feature in room.features %}<li>{{ feature }}</li>{% endfor %}</ul><p>Frühstück ist im Beispielpreis enthalten. Anreise ab 15 Uhr, Abreise bis 11 Uhr. Die Kategorie ist ein fiktiver Entwurf; das Bild zeigt eine gemeinsame Zimmerstudie.</p><p class="room-price">ab {{ room.price }} € <small>/ Nacht für zwei</small></p><a class="button" href="{{ '/auszeit/' | url }}?zimmer={{ room.slug }}">Mit diesem Raum planen ↗</a></div></section>
