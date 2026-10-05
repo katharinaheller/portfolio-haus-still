@@ -7,8 +7,10 @@ menu?.addEventListener("click", () => {
 });
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
+    const focusWasInside = nav?.contains(document.activeElement);
     menu?.setAttribute("aria-expanded", "false");
     nav?.classList.remove("open");
+    if (focusWasInside && menu instanceof HTMLElement) menu.focus();
   }
 });
 const form = document.querySelector("#stay-form");

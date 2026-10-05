@@ -1,3 +1,27 @@
-import {test,expect} from '@playwright/test';
-test('stay planner rejects invalid dates and calculates nights',async({page})=>{await page.goto('./auszeit/');await page.getByRole('button',{name:'Aufenthalt berechnen'}).click();await expect(page.locator('#stay-result')).toContainText('Bitte wählen');const date=(days:number)=>{const d=new Date();d.setDate(d.getDate()+days);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};await page.getByLabel('Anreise',{exact:true}).fill(date(20));await page.getByLabel('Abreise',{exact:true}).fill(date(23));await page.getByLabel('Ihr Raum').selectOption('bergzimmer');await page.getByRole('button',{name:'Aufenthalt berechnen'}).click();await expect(page.locator('#stay-result')).toContainText('687,00');await page.getByRole('button',{name:'Demo-Anfrage abschließen'}).click();await expect(page.locator('#stay-confirmation')).toContainText('keine Reservierung');});
-test('room choice is carried into the planner',async({page})=>{await page.goto('./wohnen/atelier/');await page.getByRole('link',{name:'Mit diesem Raum planen'}).click();await expect(page.getByLabel('Ihr Raum')).toHaveValue('atelier');});
+import { test, expect } from "@playwright/test";
+test("stay planner rejects invalid dates and calculates nights", async ({
+  page,
+}) => {
+  await page.goto("./auszeit/");
+  await page.getByRole("button", { name: "Aufenthalt berechnen" }).click();
+  await expect(page.locator("#stay-result")).toContainText("Bitte wählen");
+  const date = (days: number) => {
+    const d = new Date();
+    d.setDate(d.getDate() + days);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  };
+  await page.getByLabel("Anreise", { exact: true }).fill(date(20));
+  await page.getByLabel("Abreise", { exact: true }).fill(date(23));
+  await page.getByLabel("Ihr Raum").selectOption("bergzimmer");
+  await page.getByRole("button", { name: "Aufenthalt berechnen" }).click();
+  await expect(page.locator("#stay-result")).toContainText("687,00");
+  await page.getByRole("button", { name: "Demo-Anfrage abschließen" }).click();
+  await expect(page.locator("#stay-confirmation")).toContainText(
+    "keine Reservierung",
+  );
+});
+test("room choice is carried into the planner", async ({ page }) => {
+  await page.goto("./wohnen/atelier/");
+  await page.getByRole("link", { name: "Mit diesem Raum planen" }).click();
+  await expect(page.getByLabel("Ihr Raum")).toHaveValue("atelier");
+});
