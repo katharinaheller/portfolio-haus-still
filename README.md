@@ -58,6 +58,8 @@ Unique German title/description, canonical, Open Graph, Twitter card, local soci
 
 ## Quality evidence
 
+Verified on the public production URL on 2026-10-05: **4/4 functional tests passed**, 11 content routes checked, no console/network/link/image failures and no axe violations in the audited views. Mobile Lighthouse: **100 Performance / 100 Accessibility / 100 Best Practices / 100 SEO**. See the committed machine-readable production reports for scope and timestamps.
+
 Local/production browser audits, screenshots and Lighthouse reports are in `reports/`. Lighthouse figures are single-run mobile lab measurements, not field Core Web Vitals or an INP guarantee. The root PORTFOLIO_OVERVIEW.md records the final verified results. Functional tests live in `tests/`.
 
 ## Open-source and assets
@@ -68,5 +70,6 @@ See [CREDITS.md](CREDITS.md), [DEPENDENCY_LICENSES.md](DEPENDENCY_LICENSES.md), 
 
 ## Known intentional limits
 
-The house does not exist. The stay planner does not check inventory, collect guest data or book rooms. Categories share one disclosed generated room atmosphere study.
+Dependency maintenance: npm audit reports one unpatched braces advisory propagating through five local Eleventy build/watch dependencies. No affected library runs on the published static site. Build trusted inputs only and do not expose the development server. See [SECURITY.md](SECURITY.md) for the exact advisory, scope and upgrade plan.
 
+The house does not exist. The stay planner does not check inventory, collect guest data or book rooms. Categories share one disclosed generated room atmosphere study.

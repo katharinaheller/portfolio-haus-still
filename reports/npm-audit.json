@@ -1,0 +1,140 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@11ty/eleventy": {
+      "name": "@11ty/eleventy",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@11ty/eleventy-dev-server",
+        "chokidar",
+        "nunjucks"
+      ],
+      "effects": [],
+      "range": "0.4.0 - 4.0.0-alpha.5",
+      "nodes": [
+        "node_modules/@11ty/eleventy"
+      ],
+      "fixAvailable": {
+        "name": "@11ty/eleventy",
+        "version": "0.6.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@11ty/eleventy-dev-server": {
+      "name": "@11ty/eleventy-dev-server",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "chokidar"
+      ],
+      "effects": [
+        "@11ty/eleventy"
+      ],
+      "range": "<=2.0.8",
+      "nodes": [
+        "node_modules/@11ty/eleventy-dev-server"
+      ],
+      "fixAvailable": {
+        "name": "@11ty/eleventy",
+        "version": "0.6.0",
+        "isSemVerMajor": true
+      }
+    },
+    "braces": {
+      "name": "braces",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1240992,
+          "name": "braces",
+          "dependency": "braces",
+          "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+          "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+          "severity": "high",
+          "cwe": [
+            "CWE-674"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=3.0.3"
+        }
+      ],
+      "effects": [
+        "chokidar"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/braces"
+      ],
+      "fixAvailable": {
+        "name": "@11ty/eleventy",
+        "version": "0.6.0",
+        "isSemVerMajor": true
+      }
+    },
+    "chokidar": {
+      "name": "chokidar",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "braces"
+      ],
+      "effects": [
+        "@11ty/eleventy",
+        "@11ty/eleventy-dev-server",
+        "nunjucks"
+      ],
+      "range": "2.0.0 - 3.6.0",
+      "nodes": [
+        "node_modules/chokidar"
+      ],
+      "fixAvailable": {
+        "name": "@11ty/eleventy",
+        "version": "0.6.0",
+        "isSemVerMajor": true
+      }
+    },
+    "nunjucks": {
+      "name": "nunjucks",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "chokidar"
+      ],
+      "effects": [
+        "@11ty/eleventy"
+      ],
+      "range": "1.0.2 - 1.0.3 || >=3.1.3",
+      "nodes": [
+        "node_modules/nunjucks"
+      ],
+      "fixAvailable": {
+        "name": "@11ty/eleventy",
+        "version": "0.6.0",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 5,
+      "critical": 0,
+      "total": 5
+    },
+    "dependencies": {
+      "prod": 130,
+      "dev": 100,
+      "optional": 1,
+      "peer": 6,
+      "peerOptional": 0,
+      "total": 232
+    }
+  }
+}
